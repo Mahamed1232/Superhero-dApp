@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <div class="hero-details">
+      <div class="hero-avatar">
+        <img [src]="hero.avatar" alt={{hero.name}}} title={{hero.name}} width="400" />
+      </div>
+      <div class="hero-content">
+        <h1>{{hero.name}}</h1>
+        <div [innerHTML]="hero.description"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <button  mat-button routerLink="/">Back to list</button>
+  </mat-card-content>
+  <mat-card-content>
+    <app-hero-review-form [hero]="hero"></app-hero-review-form>
+  </mat-card-content>
+  <mat-card-content>
+    <app-reviews [reviews]="superheroReviews"></app-reviews>
+  </mat-card-content>
+</mat-card>
